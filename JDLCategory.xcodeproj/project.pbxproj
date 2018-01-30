@@ -19,6 +19,7 @@
 		821038A2201EF58B00426F14 /* UIImage+JDLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 821038A1201EF58B00426F14 /* UIImage+JDLExtension.m */; };
 		821038A5201EF5E100426F14 /* UIBarButtonItem+JDLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 821038A4201EF5E100426F14 /* UIBarButtonItem+JDLExtension.m */; };
 		821038A8201EF63A00426F14 /* UIButton+JDLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 821038A7201EF63A00426F14 /* UIButton+JDLExtension.m */; };
+		821038AB202049EA00426F14 /* NSString+JDLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 821038AA202049EA00426F14 /* NSString+JDLExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,8 @@
 		821038A4201EF5E100426F14 /* UIBarButtonItem+JDLExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+JDLExtension.m"; sourceTree = "<group>"; };
 		821038A6201EF63A00426F14 /* UIButton+JDLExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+JDLExtension.h"; sourceTree = "<group>"; };
 		821038A7201EF63A00426F14 /* UIButton+JDLExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JDLExtension.m"; sourceTree = "<group>"; };
+		821038A9202049EA00426F14 /* NSString+JDLExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+JDLExtension.h"; sourceTree = "<group>"; };
+		821038AA202049EA00426F14 /* NSString+JDLExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+JDLExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,8 @@
 				821038A4201EF5E100426F14 /* UIBarButtonItem+JDLExtension.m */,
 				821038A6201EF63A00426F14 /* UIButton+JDLExtension.h */,
 				821038A7201EF63A00426F14 /* UIButton+JDLExtension.m */,
+				821038A9202049EA00426F14 /* NSString+JDLExtension.h */,
+				821038AA202049EA00426F14 /* NSString+JDLExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 				8210389F201EF43200426F14 /* UITabBarController+JDLExtension.m in Sources */,
 				82103898201EEDAB00426F14 /* UITextField+JDLExtension.m in Sources */,
 				82103881201EECEF00426F14 /* AppDelegate.m in Sources */,
+				821038AB202049EA00426F14 /* NSString+JDLExtension.m in Sources */,
 				8210389C201EEFDC00426F14 /* UIView+JDLExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
