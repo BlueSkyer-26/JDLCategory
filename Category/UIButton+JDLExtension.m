@@ -2,15 +2,15 @@
 //  UIButton+JDLExtension.m
 //  JDLCategory
 //
-//  Created by 胜炫电子 on 2018/1/29.
-//  Copyright © 2018年 BlueSkyer-25. All rights reserved.
+//  Created by 胜炫电子 on 2017/1/29.
+//  Copyright © 2017年 BlueSkyer-25. All rights reserved.
 //
 
 #import "UIButton+JDLExtension.h"
 
 @implementation UIButton (JDLExtension)
 /** 倒计时,秒字倒计，带有回调 */
--(void)JDL_countdownWithSecond:(NSInteger)second completion:(countdownCompletionBlock)block{
+-(void)jdl_countdownWithSecond:(NSInteger)second completion:(countdownCompletionBlock)block{
     __block NSInteger tempSecond = second;
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);

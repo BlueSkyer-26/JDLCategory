@@ -2,8 +2,8 @@
 //  UITextField+JDLExtension.m
 //  JDLCategory
 //
-//  Created by 胜炫电子 on 2018/1/29.
-//  Copyright © 2018年 BlueSkyer-25. All rights reserved.
+//  Created by 胜炫电子 on 2017/1/29.
+//  Copyright © 2017年 BlueSkyer-25. All rights reserved.
 //
 
 #import "UITextField+JDLExtension.h"
@@ -20,21 +20,21 @@ static NSString * const placeholderColorKey = @"placeholderLabel.textColor";
     
     method_exchangeImplementations(setPlaceHolderText, setPlaceholder);
 }
-- (void)setPlaceholderColor:(UIColor *)placeholderColor
-{
-    objc_setAssociatedObject(self, objcPlaceholderColorKey, placeholderColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setJdl_placeholderColor:(UIColor *)jdl_placeholderColor{
+    objc_setAssociatedObject(self, objcPlaceholderColorKey, jdl_placeholderColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     UILabel *label =[self valueForKey:@"placeholderLabel"];
-    label.textColor =placeholderColor;
+    label.textColor =jdl_placeholderColor;
 }
 
-- (UIColor *)placeholderColor{
+- (UIColor *)jdl_placeholderColor{
     return objc_getAssociatedObject(self, objcPlaceholderColorKey);
 }
 
 -(void)setPlaceHolderText:(NSString *)placeholder{
     
     [self setPlaceHolderText:placeholder];
-    self.placeholderColor =self.placeholderColor;
+//    self.tintColor =[UIColor orangeColor];
+    self.jdl_placeholderColor =self.jdl_placeholderColor;
 }
 
 //- (void)setPlaceholderColor:(UIColor *)placeholderColor

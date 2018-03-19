@@ -2,8 +2,8 @@
 //  PrefixHeader.pch
 //  JDLCategory
 //
-//  Created by 胜炫电子 on 2018/1/29.
-//  Copyright © 2018年 BlueSkyer-25. All rights reserved.
+//  Created by 胜炫电子 on 2017/1/29.
+//  Copyright © 2017年 BlueSkyer-25. All rights reserved.
 //
 
 #ifndef PrefixHeader_pch
@@ -13,7 +13,8 @@
 #import "UIView+JDLExtension.h"
 #import "NSString+JDLExtension.h"
 
-
+/*** 将服务器返回的数据写入plist ***/
+#define JDLWriteToPlist(data, filename) [data writeToFile:[NSString stringWithFormat:@"/Users/shengxuandianzi/Desktop/%@.plist", filename] atomically:YES];
 
 // 判断是否是iPhone X
 #define KIS_IPHONE_X ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)

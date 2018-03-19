@@ -2,8 +2,8 @@
 //  NSString+JDLExtension.m
 //  JDLCategory
 //
-//  Created by 胜炫电子 on 2018/1/30.
-//  Copyright © 2018年 BlueSkyer-25. All rights reserved.
+//  Created by 胜炫电子 on 2017/1/30.
+//  Copyright © 2017年 BlueSkyer-25. All rights reserved.
 //
 
 #import "NSString+JDLExtension.h"
@@ -11,7 +11,7 @@
 @implementation NSString (JDLExtension)
 
 #pragma mark ------ 获取文件或文件夹大小
-- (unsigned long long)fileSize
+- (unsigned long long)jdl_fileSize
 {
     // 总大小
     unsigned long long size = 0;
@@ -36,9 +36,10 @@
     }
     return size;
 }
+
 #pragma mark ------ 文件或文件夹大小 ---> B KB MB GB (直接传文件路径  计算大小+转换)
-- (NSString *)fileSizeChangeToSize{
-    unsigned long long size =[self fileSize];
+- (NSString *)jdl_fileSizeChangeToSize{
+    unsigned long long size =[self jdl_fileSize];
     NSString *sizeStr =nil;
     if(size >pow(10, 9)){                   //GB
         sizeStr =[NSString stringWithFormat:@"%.2fGB",size/pow(10, 9)];
@@ -51,5 +52,27 @@
     }
     return sizeStr;
 }
+
+#pragma mark ------ 字符串是否全部是汉字
+- (BOOL)jdl_isChinese
+{
+    NSString *match = @"(^[\u4e00-\u9fa5]+$)";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF matches %@", match];
+    return [predicate evaluateWithObject:self];
+}
+
+#pragma mark ------ 判断是否含有汉字
+- (BOOL)jdl_includeChinese
+{
+    for(int i=0; i< [self length];i++)
+    {
+        int a =[self characterAtIndex:i];
+        if( a >0x4e00&& a <0x9fff){
+            return YES;
+        }
+    }
+    return NO;
+}
+
 
 @end

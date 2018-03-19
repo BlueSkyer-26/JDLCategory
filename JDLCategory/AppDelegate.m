@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  JDLCategory
 //
-//  Created by 胜炫电子 on 2018/1/29.
-//  Copyright © 2018年 BlueSkyer-25. All rights reserved.
+//  Created by 胜炫电子 on 2017/1/29.
+//  Copyright © 2017年 BlueSkyer-25. All rights reserved.
 //
 
 #import "AppDelegate.h"

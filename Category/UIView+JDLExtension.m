@@ -2,8 +2,8 @@
 //  UIView+JDLExtension.m
 //  JDLCategory
 //
-//  Created by 胜炫电子 on 2018/1/29.
-//  Copyright © 2018年 BlueSkyer-25. All rights reserved.
+//  Created by 胜炫电子 on 2017/1/29.
+//  Copyright © 2017年 BlueSkyer-25. All rights reserved.
 //
 
 #import "UIView+JDLExtension.h"
@@ -103,5 +103,17 @@
     CGRect frame = self.frame;
     frame.size = jdl_size;
     self.frame = frame;
+}
+
++ (instancetype)viewFromXib
+{
+    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].lastObject;
+}
+- (BOOL)intersectWithView:(UIView *)view
+{
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    CGRect selfRect = [self convertRect:self.bounds toView:window];
+    CGRect viewRect = [view convertRect:view.bounds toView:window];
+    return CGRectIntersectsRect(selfRect, viewRect);
 }
 @end
